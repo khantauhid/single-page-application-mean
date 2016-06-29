@@ -1,0 +1,60 @@
+<!-- <div align = "right">
+  <a href="#/login">Login Now</a>
+</div>
+<div align = "center">
+  <form name="userSignUpForm" class="form">
+  <h1><u>Registration</u></h1>
+  <br>First Name :-
+  <input type="text" name="firstName" ng-pattern="/^[a-zA-Z\s]*$/" maxlength="40" placeholder="First name" ng-model="user.firstName" required>
+  <p class="error_form" ng-show="userSignUpForm.$submitted && userSignUpForm.firstName.$invalid">
+      *required only text
+  </p>
+  <br>
+  <br>Last Name :-
+  <input type="text" name="lastName" ng-pattern="/^[a-zA-Z\s]*$/" maxlength="35" placeholder="Last name" ng-model="user.lastName" required>
+  <p class="error_form" ng-show="userSignUpForm.$submitted && userSignUpForm.lastName.$invalid">
+    *required only text
+  </p>
+  <br>
+  <br>Email :-
+  <input type="text" name="email"  placeholder="Email address" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="user.email" required>
+  <p class="error_form" ng-show="userSignUpForm.$submitted && userSignUpForm.email.$invalid">
+    *required valid email id
+  </p>
+  <br>
+  <br>Password :-
+  <input type="password" name="password" minlength="5" placeholder="your secret password" ng-model="user.password" required>
+  <br>
+  <br>
+  <button type="submit" ng-click="userSignUp(user)">Sign Up</submit>
+  </form>
+</div> -->
+<div>
+	<div class="text-center">
+	<img src="images/3.jpeg">
+	<h2 class="port">User SignUp</h2>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 login-border">
+	<form class="form" name="userLoginForm" style="margin-top:17px;">
+	<div>
+		<div>
+      <div class="form-group">
+        <input type="text" name="firstName" ng-pattern="/^[a-zA-Z\s]*$/" maxlength="40" class="form-control firstName border_none2 width70" placeholder="First name" ng-model="user.firstName" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="lastName" ng-pattern="/^[a-zA-Z\s]*$/" maxlength="40" class="form-control lastName border_none2 width70" placeholder="Last name" ng-model="user.lastName" required>
+      </div>
+			<div class="form-group">
+				<input type="text" name="email" placeholder="Email address" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="user.email" class="form-control email border_none2 width100" required>
+			</div>
+			 <div class="form-group">
+				<input type="password" placeholder="Password" name="password" ng-model="user.password" class="form-control email border_none2 width100" required>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit" ng-click="userSignUp(user)" style="width:100%;">SignUp</button>
+			</div>
+		</div>
+	</div>
+</form>
+<p>Already have account - <a href="#/login">Login</a><p>
+</div>
