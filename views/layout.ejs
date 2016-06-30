@@ -5,6 +5,8 @@
     <title>UserApp</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/_all-skins.min.css'/>
+    <link rel='stylesheet' href='/stylesheets/AdminLTE.min.css' />
     <script src="./jquery-1.12.3.min.js"></script>
     <script src="./bootstrap.min.js"></script>
     <script src="./angular.min.js"></script>
@@ -14,9 +16,11 @@
     <script src="./controller/controller.js"></script>
   </head>
   <!-- <body style="background-color:#380000"> -->
-  <!-- <img src="images/2.jpeg"> -->
+  <!-- <img src="images/4.png"> -->
   <body>
     <!-- <%- body %> -->
-    <div ng-view></div>
+    <div ng-view=""></div>
+    <div ng-include="'htmlPages/header.html'"></div>
+    <!-- <div ng-view></div> -->
   </body>
 </html>
