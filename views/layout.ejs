@@ -9,18 +9,26 @@
     <link rel='stylesheet' href='/stylesheets/AdminLTE.min.css' />
     <script src="./jquery-1.12.3.min.js"></script>
     <script src="./bootstrap.min.js"></script>
-    <script src="./angular.min.js"></script>
+    <!-- <script src="./angular.min.js"></script>
     <script src="./angular-route.js"></script>
     <script src="./ngStorage.min.js"></script>
+    <script src="./angular-ui-router.min.js"></script> -->
+    <!-- Angular -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script> -->
+  <script src="./bower_components/angular/angular.js"></script>
+  <!-- UI-Router -->
+  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+  <!-- <script src="./ngStorage.min.js"></script> -->
+  <script src="./bower_components/ngstorage/ngStorage.js"></script>
+
     <script src="./controller/app.js"></script>
     <script src="./controller/controller.js"></script>
   </head>
-  <!-- <body style="background-color:#380000"> -->
+  <body style="background-color:#380000">
   <!-- <img src="images/4.png"> -->
   <body>
     <!-- <%- body %> -->
-    <div ng-view=""></div>
-    <div ng-include="'htmlPages/header.html'"></div>
+    <div ui-view></div>
     <!-- <div ng-view></div> -->
   </body>
 </html>

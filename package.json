@@ -6,6 +6,7 @@
     "express": "2.5.8",
     "ejs": ">= 0.0.1",
     "rand-token": "~0.2.1",
-    "random-token": "0.0.8"
+    "random-token": "0.0.8",
+    "jquery": "~3.0.0"
   }
 }

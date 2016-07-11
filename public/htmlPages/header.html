@@ -6,7 +6,9 @@
             </a>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-5" ng-controller="homePageController" class="col-lg-6 col-md-6 col-sm-5 " style="text-align:right;position:relative;top:15px;">
-         <button type="submit" ng-click="logOut()">LogOut</button>
+         <!-- <button type="submit" ng-click="logOut()">LogOut</button> -->
+         <b><p>{{userData.firstName}} {{userData.lastName}}</p></b>
+         <li><a href="#" ng-click="logOut()">Logout</a></li>
         </div>
     </div>
 </nav>

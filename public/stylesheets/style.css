@@ -36,15 +36,31 @@ a {
   position: relative;
   z-index: 30;
 }
+.black_bg {
+        background-color: #41464C;
+        position: fixed;
+        height: 100%;
+        width: 25%
+    }
+    .black_bg {
+            background-color: #41464C;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 0 0 20px;
+        }
+        .text-center {
+      text-align: center;
+  }
 
 .login-border {
   border-width: 2px;
   border-style: solid;
   border-color: buttonface;
 }
-.shadow_bottom {
+/*.shadow_bottom {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.65) !important;
-    }
+    }*/
     .menu_font_style {
       font-size: 15px;
       font-weight: bold;
