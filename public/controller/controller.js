@@ -1,8 +1,9 @@
 userApp.controller('homePageController', function($scope, $http, $rootScope, $state, $localStorage){
-	// console.log("I am in home controller");
+	console.log("I am in home controller");
 	$scope.userLogin = function(data){
     // $location.path('/login');
-    $http.post('userLogin', data).success(function(response){
+    // console.log(data);
+    $http.post('userLogin', {username:data.email, password:data.password}).success(function(response){
       // $scope.register = response;
       if (response.authentication == true) {
         $localStorage.userData = response;
@@ -10,6 +11,18 @@ userApp.controller('homePageController', function($scope, $http, $rootScope, $st
       }
     })
   }
+
+  // ===feedback===================
+  $scope.userFeedBack = function() {
+    console.log("I am in user feedback function");
+    ngDialog.open({
+      template: "./htmlPages/userFeedBack.html",
+      controller: "homePageController"
+    })
+  }
+
+  // =================================
+
   if($localStorage.userData){
     $scope.userData = $localStorage.userData;
   }
@@ -28,7 +41,7 @@ userApp.controller('homePageController', function($scope, $http, $rootScope, $st
 userApp.controller('registrationController', function($scope, $http, $rootScope, $state, $location){
   console.log("I m in registration controller");
   $scope.userSignUp = function(data){
-    console.log("I m in controller");
+    console.log(data);
     $http.post('userSignUp', data).success(function(response){
       console.log(response);
       if (response.authentication == true) {
@@ -40,11 +53,11 @@ userApp.controller('registrationController', function($scope, $http, $rootScope,
   }
 });
 userApp.controller('loginController', function($scope, $http, $rootScope, $state, $location, $localStorage){
-  // console.log("Welcome to login page");
+  console.log("Welcome to login page");
   $scope.userLogin = function(data){
-    // console.log(data);
-    $http.post('userLogin', data).success(function(response){
-      // console.log(response);
+    console.log(data);
+    $http.post('userLogin', {username:data.email, password:data.password, firstName : data.firstName, lastName : data.lastName}).success(function(response){
+      // console.log(response.firstName);
       // $scope.register = response;
       if (response.authentication == true) {
         $localStorage.userData = response;

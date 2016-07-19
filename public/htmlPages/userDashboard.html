@@ -17,56 +17,14 @@
 </header>
 </div>
 </body> -->
-<!DOCTYPE html>
-<html>
-<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <title>AdminLTE 2 | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel='stylesheet' href='/stylesheets/_all-skins.min.css'/>
-  <link rel='stylesheet' href='/stylesheets/AdminLTE.min.css' />
-  <!-- iCheck -->
-  <link rel="stylesheet" href="/stylesheets/CSS/flat/blue.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="/stylesheets/CSS/morris.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="/stylesheets/CSS/jquery-jvectormap-1.2.2.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="/stylesheets/CSS/datepicker3.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="/stylesheets/CSS/daterangepicker-bs3.css">
-  <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="/stylesheets/CSS/bootstrap3-wysihtml5.min.css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
-  <header class="main-header">
-    <!-- Logo -->
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <div ng-include="'htmlPages/header.html'"></div>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -82,7 +40,7 @@
         </div>
       </div>
       <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
+      <!-- <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
               <span class="input-group-btn">
@@ -90,12 +48,12 @@
                 </button>
               </span>
         </div>
-      </form>
+      </form> -->
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header">MAIN NAVIGATION</li>
-        <li><a href="#" ng-click="logOut()" class="btn btn-primary">Logout</a></li>
+        <li class="header"><b>Successive Software</b></li>
+        <li><a ui-sref="login" ng-click="logOut()" class="btn btn-primary">Logout</a></li>
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
@@ -244,7 +202,11 @@
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <!-- <a style="cursor: pointer:" ng-click="userFeedBack()"><i class="fa fa-pencil" aria-hidden="true">edit</i></a> -->
+      <!-- <i class="fa fa-pencil"></i> -->
+      <a style="cursor: pointer;" ng-click="userFeedBack()">
+                <i_twitter_footer class="fa fa-comment" title="Feedback">FeedBack</i_twitter_footer></a>
+        <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
         <!-- <button type="submit" ng-click="logOut()">LogOut</button> -->
       </ol>
@@ -950,46 +912,3 @@
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery 2.2.0 -->
-<script src="/javascripts/jQuery-2.2.0.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<!-- <script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script> -->
-<!-- Bootstrap 3.3.6 -->
-<script src="/javascripts/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="/javascripts/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="/javascripts/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="/javascripts/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="/javascripts/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="/javascripts/jquery.knob.js"></script>
-<!-- daterangepicker -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="/javascripts/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="/javascripts/bootstrap-datepicker.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="/javascripts/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="/javascripts/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="/javascripts/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="/javascripts/app.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/javascripts/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="/javascripts/demo.js"></script>
-<div ng-include="'htmlPages/header.html'"></div>
-</body>
-</html>

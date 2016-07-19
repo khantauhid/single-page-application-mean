@@ -2,13 +2,20 @@
     <div class="container-fluid">
         <div class="col-lg-6 col-md-6 col-sm-7 col-xs-4">
             <!-- <a class="top_20 " href="/#/"> -->
-                <img class="img-responsive " src="images/ss.jpeg">
+                <!-- <img class="img-responsive " src="images/ss.jpeg"> -->
             </a>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-5" ng-controller="homePageController" class="col-lg-6 col-md-6 col-sm-5 " style="text-align:right;position:relative;top:15px;">
          <!-- <button type="submit" ng-click="logOut()">LogOut</button> -->
          <b><p>{{userData.firstName}} {{userData.lastName}}</p></b>
-         <li><a href="#" ng-click="logOut()">Logout</a></li>
+        <!--  <select>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="vw">VW</option>
+              <option value="audi" selected>Audi</option>
+        </select> -->
+        <!-- <li><i class="fa fa-pencil fa-fw"></i> Edit</li> -->
+         <li><a ui-sref="login" ng-click="logOut()">Logout</a></li>
         </div>
     </div>
 </nav>
